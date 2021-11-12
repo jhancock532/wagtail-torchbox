@@ -7,42 +7,23 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("work", "0023_date_data_migration"),
+        ('work', '0023_date_data_migration'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name="workpagescreenshot",
-            name="image",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='workpagescreenshot',
+            name='image',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="workpage",
-            name="feed_image",
-            field=models.ForeignKey(
-                blank=True,
-                help_text="Image used on listings and social media.",
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='workpage',
+            name='feed_image',
+            field=models.ForeignKey(blank=True, help_text='Image used on listings and social media.', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="workpage",
-            name="homepage_image",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='workpage',
+            name='homepage_image',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
     ]

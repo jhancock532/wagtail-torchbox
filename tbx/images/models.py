@@ -1,4 +1,5 @@
 from django.db import models
+
 from wagtail.images.models import AbstractImage, AbstractRendition, Image
 
 
@@ -10,6 +11,7 @@ class CustomImage(AbstractImage):
     @property
     def credit_text(self):
         return self.credit
+
 
 class Rendition(AbstractRendition):
     image = models.ForeignKey(

@@ -7,36 +7,28 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("services", "0031_service_process_section_cta"),
+        ('services', '0031_service_process_section_cta'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name="servicepageclientlogo",
-            name="image",
-            field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="images.CustomImage"
-            ),
+            model_name='servicepageclientlogo',
+            name='image',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="servicepageusaclientlogo",
-            name="image",
-            field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="images.CustomImage"
-            ),
+            model_name='servicepageusaclientlogo',
+            name='image',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="subservicepageclientlogo",
-            name="image",
-            field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="images.CustomImage"
-            ),
+            model_name='subservicepageclientlogo',
+            name='image',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="subservicepageusaclientlogo",
-            name="image",
-            field=models.ForeignKey(
-                on_delete=django.db.models.deletion.CASCADE, to="images.CustomImage"
-            ),
+            model_name='subservicepageusaclientlogo',
+            name='image',
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='images.CustomImage'),
         ),
     ]

@@ -7,52 +7,28 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("torchbox", "0139_homepage_featured_posts_and_hero_image"),
+        ('torchbox', '0139_homepage_featured_posts_and_hero_image'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name="homepage",
-            name="hero_image",
-            field=models.ForeignKey(
-                help_text="Image used on mobile hero.",
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='homepage',
+            name='hero_image',
+            field=models.ForeignKey(help_text='Image used on mobile hero.', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="homepageclient",
-            name="image",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='homepageclient',
+            name='image',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="homepagehero",
-            name="background",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='homepagehero',
+            name='background',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
         migrations.AlterField(
-            model_name="homepagehero",
-            name="logo",
-            field=models.ForeignKey(
-                blank=True,
-                null=True,
-                on_delete=django.db.models.deletion.SET_NULL,
-                related_name="+",
-                to="images.CustomImage",
-            ),
+            model_name='homepagehero',
+            name='logo',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage'),
         ),
     ]
